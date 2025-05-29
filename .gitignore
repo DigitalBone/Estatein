@@ -1,0 +1,43 @@
+# WordPress core files and sensitive configs
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-*/
+wp-content/cache/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/object-cache.php
+wp-content/debug.log
+
+# OS & IDE files
+.DS_Store
+Thumbs.db
+*.sublime*
+*.code-workspace
+.vscode/
+.idea/
+
+# Node & Composer
+node_modules/
+npm-debug.log
+yarn-error.log
+composer.lock
+vendor/
+
+# Logs
+*.log
+
+# Env
+.env
+.env.*
+
+# Misc
+*.sql
+*.tar.gz
+*.zip
+*.bak
+*.tmp
+*.swp
+
+# Git
+.git/
