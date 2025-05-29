@@ -37,7 +37,7 @@
                         }
                         ?>
                     </div>
-                    <span class="site-title">Estatein</span>
+                    <!-- <span class="site-title">Estatein</span> -->
                 </a>
             </div>
             <!-- Desktop Navigation & Contact (Right Aligned) -->
@@ -81,7 +81,13 @@
                 <a href="<?php echo esc_url(home_url('/contact')); ?>" class="button mobile-contact-btn">Contact Us</a>
             </div>
         </div>
-    </header>
+    <script>
+// Page fade-in effect
+window.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('page-fade-in');
+});
+</script>
+</header>
     
 
     <div class="site-content">
@@ -134,21 +140,5 @@ document.addEventListener('DOMContentLoaded', function() {
             } ?>
         </div>
     </div>
-
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main">
-            <div class="container">
-                <?php
-                if (is_page_template('templates/homepage.php')) {
-                    get_template_part('template-parts/content', 'features');
-                    get_template_part('template-parts/content', 'properties');
-                    get_template_part('template-parts/content', 'stats');
-                    get_template_part('template-parts/content', 'testimonials');
-                    get_template_part('template-parts/content', 'cta');
-                    get_template_part('template-parts/content', 'faqs');
-                }
-                ?>
-            </div>
-        </main>
     </div>
 </div>

@@ -16,7 +16,14 @@ if (!function_exists('estatein_setup')) {
             'gallery',
             'caption',
         ));
-        
+        // Enable custom logo support
+        add_theme_support('custom-logo', array(
+            'height'      => 60,
+            'width'       => 240,
+            'flex-height' => true,
+            'flex-width'  => true,
+            'header-text' => array('site-title', 'site-description'),
+        ));
         // Register navigation menus
         register_nav_menus(array(
             'primary' => esc_html__('Primary', 'estatein'),

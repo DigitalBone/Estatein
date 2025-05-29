@@ -7,7 +7,7 @@ get_header(); ?>
 <main id="main" class="site-main">
     <?php
     // Hero Section
-    get_template_part('template-parts/content', 'hero');
+    // get_template_part('template-parts/content', 'hero');
     // Features Row
     get_template_part('template-parts/content', 'features');
     // Featured Properties

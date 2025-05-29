@@ -1,34 +1,42 @@
 <section class="features-row">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-6 feature-card">
-                <div class="feature-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-realtors.svg" alt="Best Realtors">
-                </div>
-                <h3 class="feature-title">The Best Realtors</h3>
-                <p class="feature-desc">Work with top-rated, trusted real estate professionals.</p>
-            </div>
-            <div class="col-lg-3 col-6 feature-card">
-                <div class="feature-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-projects.svg" alt="Wide Project Lists">
-                </div>
-                <h3 class="feature-title">Wide Project Lists</h3>
-                <p class="feature-desc">Explore a diverse range of property projects and listings.</p>
-            </div>
-            <div class="col-lg-3 col-6 feature-card">
-                <div class="feature-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-support.svg" alt="Efficient Team Support">
-                </div>
-                <h3 class="feature-title">Efficient Team Support</h3>
-                <p class="feature-desc">Get expert help and guidance every step of the way.</p>
-            </div>
-            <div class="col-lg-3 col-6 feature-card">
-                <div class="feature-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-warranty.svg" alt="Service Warranty">
-                </div>
-                <h3 class="feature-title">Service Warranty & Home Secure</h3>
-                <p class="feature-desc">Enjoy peace of mind with our warranty and security services.</p>
-            </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-6">
+    <div class="feature-card">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/card-arrow.svg" alt="Arrow" class="feature-card-arrow" />
+        <div class="feature-icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-dream-home.svg" alt="Find your dream home">
+        </div>
+        <h3 class="feature-title">Find your dream home</h3>
+    </div>
+</div>
+            <div class="col-lg-3 col-6">
+    <div class="feature-card">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/card-arrow.svg" alt="Arrow" class="feature-card-arrow" />
+        <div class="feature-icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home.png" alt="Unlock Property Value">
+        </div>
+        <h3 class="feature-title">Unlock Property Value</h3>
+    </div>
+</div>
+            <div class="col-lg-3 col-6">
+    <div class="feature-card">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/card-arrow.svg" alt="Arrow" class="feature-card-arrow" />
+        <div class="feature-icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/effortless-property.svg" alt="Effortless Property Management">
+        </div>
+        <h3 class="feature-title">Effortless Property Management</h3>
+    </div>
+</div>
+            <div class="col-lg-3 col-6">
+    <div class="feature-card">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/card-arrow.svg" alt="Arrow" class="feature-card-arrow" />
+        <div class="feature-icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/smart-investments.svg" alt="Smart Investments, Informed Decision">
+        </div>
+        <h3 class="feature-title">Smart Investments, Informed Decisions</h3>
+    </div>
+</div>
         </div>
     </div>
 </section>
