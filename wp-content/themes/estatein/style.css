@@ -784,9 +784,17 @@ body.mobile-menu-open {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+        gap: 60px;
     justify-content: space-between;
     margin-bottom: 40px;
-    gap: 32px;
+}
+
+.section-sparkles {
+    display: block;
+    margin-bottom: 8px;
+    width: 40px;
+    height: auto;
+    margin-left: 0;
 }
 
 .section-title {

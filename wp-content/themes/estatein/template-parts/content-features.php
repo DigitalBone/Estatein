@@ -14,7 +14,7 @@
     <div class="feature-card">
         <img src="<?php echo get_template_directory_uri(); ?>/images/card-arrow.svg" alt="Arrow" class="feature-card-arrow" />
         <div class="feature-icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/home.png" alt="Unlock Property Value">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/property-value.svg" alt="Unlock Property Value">
         </div>
         <h3 class="feature-title">Unlock Property Value</h3>
     </div>

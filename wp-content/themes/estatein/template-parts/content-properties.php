@@ -2,8 +2,9 @@
     <div class="container">
         <div class="properties-section">
             <div>
-                <h2 class="section-title">Featured Properties</h2>
-                <p class="section-description">Discover our handpicked selection of the best properties for sale and rent. Find your ideal home or investment opportunity.</p>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/sparkles.svg" alt="Sparkles" class="section-sparkles" />
+<h2 class="section-title">Featured Properties</h2>
+                <p class="section-description">Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click "View Details" for more information.</p>
             </div>
             <div>
                 <a href="/properties" class="button">See All Properties</a>
