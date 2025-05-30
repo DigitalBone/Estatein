@@ -7,10 +7,14 @@
     <!-- CTA Section -->
     <div class="footer-cta-section">
         <div class="container">
-            <div class="footer-cta-content">
-                <h2 class="footer-cta-title">Start Your Real Estate Journey Today</h2>
-                <p class="footer-cta-desc">Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.</p>
-                <a href="<?php echo esc_url(get_post_type_archive_link('property')); ?>" class="footer-cta-btn">Explore Properties</a>
+            <div class="footer-cta-content d-flex justify-content-between align-items-center">
+                <div class="footer-cta-left">
+                    <h2 class="footer-cta-title">Start Your Real Estate Journey Today</h2>
+                    <p class="footer-cta-desc">Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.</p>
+                </div>
+                <div class="footer-cta-right">
+                    <a href="<?php echo esc_url(get_post_type_archive_link('property')); ?>" class="footer-cta-btn">Explore Properties</a>
+                </div>
             </div>
         </div>
         <div class="footer-cta-bg"></div>

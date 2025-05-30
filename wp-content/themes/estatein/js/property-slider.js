@@ -17,18 +17,33 @@ document.addEventListener('DOMContentLoaded', function () {
         return window.innerWidth <= 600 ? 1 : 3;
     }
 
+    function fadeOut(slide) {
+        slide.style.transition = 'opacity 0.4s cubic-bezier(.4,0,.2,1)';
+        slide.style.opacity = 0;
+    }
+    function fadeIn(slide) {
+        slide.style.transition = 'opacity 0.4s cubic-bezier(.4,0,.2,1)';
+        slide.style.opacity = 1;
+    }
     function updateSlider() {
         perView = getSlidesPerView();
         slides.forEach((slide, i) => {
             if (i >= current && i < current + perView) {
                 slide.style.display = '';
+                setTimeout(() => fadeIn(slide), 10);
             } else {
-                slide.style.display = 'none';
+                fadeOut(slide);
+                setTimeout(() => { slide.style.display = 'none'; }, 400);
             }
         });
         updateCounter();
         updateArrows();
     }
+    // Initialize all slides to opacity 0 or 1
+    slides.forEach((slide, i) => {
+        slide.style.opacity = (i < perView) ? 1 : 0;
+        slide.style.transition = 'opacity 0.4s cubic-bezier(.4,0,.2,1)';
+    });
 
     function updateCounter() {
         const totalSlides = slides.length;

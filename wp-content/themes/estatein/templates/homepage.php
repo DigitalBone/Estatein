@@ -17,7 +17,7 @@ get_header(); ?>
     // FAQs
     get_template_part('template-parts/content', 'faqs');
     // CTA Banner
-    get_template_part('template-parts/content', 'cta');
+    // get_template_part('template-parts/content', 'cta');
     ?>
 </main>
 
