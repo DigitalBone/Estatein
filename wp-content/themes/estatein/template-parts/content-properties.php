@@ -10,7 +10,7 @@
                     <p class="section-description">Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click "View Details" for more information.</p>
                     </div>
                     <div class="col-4">
-                    <a href="/properties" class="button properties-section-btn">View All Properties</a>
+                    <a href="<?php echo esc_url(get_post_type_archive_link('property')); ?>" class="button properties-section-btn">View All Properties</a>
                     </div>
                 </div>
             </div>

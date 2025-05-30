@@ -8,8 +8,62 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Language" content="<?php bloginfo('language'); ?>">
+    <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <meta name="keywords" content="real estate, properties, homes, investment, estatein">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<?php echo esc_url( (is_singular() ? get_permalink() : home_url(add_query_arg(array(),$wp->request)) )); ?>">
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="<?php wp_title('|', true, 'right'); bloginfo('name'); ?>">
+    <meta property="og:description" content="<?php bloginfo('description'); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo esc_url( (is_singular() ? get_permalink() : home_url(add_query_arg(array(),$wp->request)) )); ?>">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/og-image.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php wp_title('|', true, 'right'); bloginfo('name'); ?>">
+    <meta name="twitter:description" content="<?php bloginfo('description'); ?>">
+    <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/images/og-image.jpg">
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Estatein",
+      "url": "<?php echo esc_url( home_url('/') ); ?>",
+      "logo": "<?php echo get_template_directory_uri(); ?>/images/logo.svg",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+1-555-555-5555",
+        "contactType": "customer service",
+        "areaServed": "ZA"
+      }],
+      "sameAs": [
+        "https://www.facebook.com/estatein",
+        "https://www.instagram.com/estatein"
+      ]
+    }
+    </script>
+    <?php if (is_singular('property')) : global $post; ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Residence",
+      "name": "<?php echo esc_js(get_the_title($post)); ?>",
+      "description": "<?php echo esc_js(wp_strip_all_tags(get_the_excerpt($post))); ?>",
+      "url": "<?php echo esc_url(get_permalink($post)); ?>",
+      "image": "<?php if (has_post_thumbnail($post)) { $img = wp_get_attachment_image_src(get_post_thumbnail_id($post),'full'); echo esc_url($img[0]); } ?>",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ZA"
+      }
+    }
+    </script>
+    <?php endif; ?>
     <?php wp_head(); ?>
-<script src="<?php echo get_template_directory_uri(); ?>/js/property-slider.js" defer></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/property-slider.js" defer></script>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
@@ -94,47 +148,7 @@ window.addEventListener('DOMContentLoaded', function() {
     <div class="site-content">
         <div class="container">
 
-<?php // Sticky header and mobile menu script ?>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Sticky header
-    window.addEventListener('scroll', function() {
-        var header = document.querySelector('.site-header');
-        if(window.scrollY > 10) {
-            header.classList.add('is-sticky');
-        } else {
-            header.classList.remove('is-sticky');
-        }
-    });
-    // Mobile menu toggle
-    var mobileToggle = document.getElementById('mobile-menu-toggle');
-    var mobileMenu = document.getElementById('mobile-menu');
-    var mobileClose = document.getElementById('mobile-menu-close');
-    if (mobileToggle && mobileMenu && mobileClose) {
-        mobileToggle.addEventListener('click', function() {
-            mobileMenu.classList.add('open');
-            mobileMenu.setAttribute('aria-hidden', 'false');
-            mobileToggle.setAttribute('aria-expanded', 'true');
-            document.body.classList.add('mobile-menu-open');
-        });
-        mobileClose.addEventListener('click', function() {
-            mobileMenu.classList.remove('open');
-            mobileMenu.setAttribute('aria-hidden', 'true');
-            mobileToggle.setAttribute('aria-expanded', 'false');
-            document.body.classList.remove('mobile-menu-open');
-        });
-        // ESC key closes menu
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-                mobileMenu.classList.remove('open');
-                mobileMenu.setAttribute('aria-hidden', 'true');
-                mobileToggle.setAttribute('aria-expanded', 'false');
-                document.body.classList.remove('mobile-menu-open');
-            }
-        });
-    }
-});
-</script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/sticky-header-mobile-menu.js" defer></script>
 
             <?php if (is_front_page()) {
                 get_template_part('template-parts/content', 'hero');
